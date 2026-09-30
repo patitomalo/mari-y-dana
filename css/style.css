@@ -1,0 +1,350 @@
+/* ==========================================================
+   Mari & Dana · invitación web
+   Mobile first. Una columna tipo tarjeta sobre papel canson.
+   ========================================================== */
+
+/* --- Tipografías reales (cargar los archivos en /fonts) --- */
+@font-face {
+  font-family: "New Icon";
+  src: url("../fonts/NewIcon-SerifCondensed.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "New Icon Serif";
+  src: url("../fonts/NewIcon-Serif.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Berlinerins Script";
+  src: url("../fonts/TTBerlinerinsScript.otf") format("opentype");
+  font-display: swap;
+}
+
+:root {
+  --paper: #F6F3EE;
+  --paper-2: #EFEAE2;
+  --ink: #1A1A1A;
+  --ink-soft: #4A4A46;
+
+  --c-deep: #8D2B00;
+  --c-terracotta: #B55119;
+  --c-clay: #BE6731;
+  --c-khaki: #76704C;
+  --c-olive: #545E45;
+  --c-forest: #1F2D16;
+  --frame: #C06C50;
+
+  --display: "New Icon", Italiana, "Times New Roman", serif;
+  --script: "TT Berlinerins Script", "Pinyon Script", cursive;
+  --body: Jost, "Helvetica Neue", Arial, sans-serif;
+
+  --card-w: 540px;
+  --pad: 28px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--body);
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--c-olive);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Textura papel canson (ruido SVG, sin imágenes externas) --- */
+.paper, .card, body::before {
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  background-image: var(--grain);
+  opacity: .9;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Tarjeta --- */
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--card-w);
+  margin: 0 auto;
+  background-color: var(--paper);
+  background-image: var(--grain);
+  box-shadow: 0 30px 60px rgba(0,0,0,.25);
+}
+@media (min-width: 600px) {
+  .card { margin: 48px auto; }
+}
+
+/* --- Secciones --- */
+.section {
+  padding: 56px var(--pad);
+  text-align: center;
+}
+.section--tight { padding-top: 24px; }
+.section--olive {
+  background-color: var(--c-olive);
+  background-image: var(--grain);
+  color: var(--paper);
+}
+.section--terracotta {
+  background-color: var(--c-terracotta);
+  background-image: var(--grain);
+  color: var(--paper);
+}
+.section--olive .script, .section--terracotta .script { color: var(--paper); }
+.section--olive .muted, .section--terracotta .muted { color: rgba(246,243,238,.75); }
+.section--olive .illo img, .section--terracotta .illo img { filter: invert(1) brightness(1.02); }
+
+/* --- Tipografía --- */
+.script {
+  font-family: var(--script);
+  font-weight: 400;
+  color: var(--c-olive);
+  line-height: 1.1;
+  margin: 0 0 18px;
+}
+h2.script { font-size: clamp(38px, 10vw, 52px); }
+.names {
+  font-size: clamp(48px, 13vw, 68px);
+  margin: 8px 0 12px;
+}
+.names .amp { font-size: .8em; }
+.display {
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: .06em;
+}
+.date {
+  font-size: clamp(30px, 8vw, 40px);
+  margin: 14px 0 20px;
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.date .sep { display: inline-block; width: 1px; height: 1.1em; background: var(--ink); }
+.lead {
+  font-size: 17px;
+  max-width: 34ch;
+  margin: 0 auto;
+  color: var(--ink-soft);
+}
+.body { font-size: 16px; max-width: 36ch; margin: 0 auto 10px; }
+.body.strong { font-weight: 500; }
+.lugar { font-family: var(--display); font-size: 30px; letter-spacing: .12em; text-indent: .12em; text-transform: uppercase; font-weight: 400; margin: 2px auto 4px; }
+.section--tight .body { text-align: center; margin-left: auto; margin-right: auto; }
+.display { text-indent: .06em; }
+.muted { color: var(--ink-soft); opacity: .8; }
+.small { font-size: 13px; }
+.kicker {
+  font-size: 22px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  margin: 8px 0 12px;
+}
+.firma { font-size: clamp(34px, 9vw, 44px); margin: 6px 0 4px; }
+.small-date { font-size: 15px; letter-spacing: .3em; }
+
+/* --- Ilustraciones --- */
+.illo { margin: 0 auto; }
+.illo img { display: block; width: 100%; height: auto; }
+.illo--hero { width: min(94%, 440px); margin: 6px auto 22px; }
+.illo--jupa { width: min(80%, 340px); margin: 8px auto 20px; }
+.illo--dress { width: min(86%, 380px); margin: 0 auto 10px; }
+.illo--regalos { width: min(60%, 260px); margin: 0 auto 16px; }
+.illo--anillos { width: 110px; margin: 10px auto 0; }
+.illo--ramo { width: min(52%, 220px); margin: 0 auto 8px; }
+.illo--footer { width: min(70%, 320px); margin: 0 auto 14px; }
+
+/* --- Flecha con título a un costado --- */
+.label-row {
+  display: flex; align-items: flex-start; justify-content: center; gap: 12px;
+}
+.label-row h2 { margin-bottom: 4px; }
+.arrow { width: 44px; color: currentColor; margin-top: 18px; }
+.arrow--flip { transform: scaleX(-1); order: -1; }
+.label-row--right .arrow { transform: none; }
+
+/* --- Botones --- */
+.btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 11px 26px;
+  border-radius: 999px;
+  border: 1.5px solid var(--c-olive);
+  background: rgba(84,94,69,.16);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: .04em;
+  transition: background .2s ease;
+}
+.btn:hover { background: rgba(84,94,69,.3); }
+.btn--dark { background: var(--c-forest); border-color: var(--c-forest); color: var(--paper); }
+.btn--dark:hover { background: #142010; }
+.section--tight .btn { margin-top: 10px; }
+
+/* --- La celebración: jupá con los horarios adentro --- */
+.section--celebracion { padding-bottom: 48px; }
+.jupa { position: relative; width: min(100%, 420px); margin: 0 auto; }
+.jupa__img { display: block; width: 100%; height: auto; filter: invert(1) brightness(1.02); }
+.jupa__lista {
+  position: absolute;
+  left: 24%; right: 24%;
+  top: 34%; bottom: 16%;
+  margin: 0; padding: 0;
+  list-style: none;
+  display: flex; flex-direction: column; justify-content: space-evenly;
+}
+.jupa__lista li { display: flex; flex-direction: column; align-items: center; line-height: 1; }
+.jupa__lista .hora {
+  font-size: clamp(30px, 8.6vw, 44px);
+  color: var(--paper);
+  letter-spacing: .02em;
+}
+.jupa__lista .que {
+  font-size: clamp(12px, 3.4vw, 16px);
+  margin-top: 6px;
+  color: rgba(246,243,238,.85);
+  letter-spacing: .08em;
+}
+
+/* --- Sección arcilla --- */
+.section--clay {
+  background-color: var(--c-clay);
+  background-image: var(--grain);
+  color: var(--paper);
+}
+.section--clay .script { color: var(--paper); }
+.section--clay .muted { color: rgba(246,243,238,.75); }
+.section--clay .illo img { filter: invert(1) brightness(1.02); }
+
+/* --- Tip de las novias (reutilizable) --- */
+.tip {
+  max-width: 36ch;
+  margin: 4px auto 0;
+  text-align: center;
+}
+.tip__arrow {
+  display: block;
+  width: 40px;
+  margin: 2px 0 2px 10%;     /* a la izquierda, bajando desde el texto hacia el tip */
+}
+.tip__label {
+  font-size: clamp(26px, 7vw, 32px);
+  margin: 0 0 6px;
+  text-align: center;
+  color: inherit;
+}
+.tip__text { margin: 0 auto; font-size: 16px; line-height: 1.55; text-align: center; }
+.section--clay .tip__label, .section--olive .tip__label, .section--terracotta .tip__label { color: var(--paper); }
+.card > .section:not(.section--clay):not(.section--olive):not(.section--terracotta) .tip__label { color: var(--c-olive); }
+
+/* --- La previa: playlists --- */
+.illo--disco { width: min(46%, 200px); margin: 0 auto 6px; }
+.playlists { max-width: 420px; margin: 26px auto 0; display: grid; gap: 16px; }
+.playlist iframe { display: block; border-radius: 12px; }
+.playlist--pronto {
+  padding: 22px 16px;
+  border: 1.5px dashed rgba(26,26,26,.35);
+  border-radius: 12px;
+}
+.playlist__nombre { font-size: 24px; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 4px; }
+.playlist--pronto .small { margin: 0; }
+
+/* --- Paleta --- */
+.paleta {
+  list-style: none; margin: 14px auto 0; padding: 0;
+  display: flex; justify-content: center; gap: 10px;
+}
+.paleta li {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--c);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.12);
+}
+
+/* --- Cuenta regresiva con marco ondulado --- */
+.section--count { padding-top: 36px; padding-bottom: 36px; }
+.marco {
+  position: relative;
+  padding: 34px 18px 26px;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+}
+.marco::before, .marco::after {
+  content: "";
+  position: absolute; inset: 6px;
+  border: 1px solid var(--ink);
+  border-radius: 10px;
+  opacity: .5;
+  pointer-events: none;
+}
+.marco::after { inset: -6px; border-radius: 18px; opacity: .35; border-style: dashed; }
+.marco h2 { margin-bottom: 14px; }
+.countdown {
+  display: flex; justify-content: center; gap: 18px;
+}
+.countdown > div { display: flex; flex-direction: column; align-items: center; min-width: 52px; }
+.countdown .display { font-size: clamp(30px, 8vw, 40px); line-height: 1; }
+.countdown small { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin-top: 6px; color: var(--ink-soft); }
+
+/* --- Formulario (sobre papel) --- */
+.section--form { text-align: left; }
+.section--form h2, .section--form > .body { text-align: center; }
+.form { max-width: 420px; margin: 24px auto 0; }
+.field { display: block; margin-bottom: 24px; border: 0; padding: 0; }
+.field > span:first-child, .field legend {
+  display: block; font-size: 14px; letter-spacing: .04em; margin-bottom: 8px;
+  color: var(--ink-soft);
+}
+.field input[type="text"], .field select {
+  width: 100%;
+  background: transparent;
+  border: 0; border-bottom: 1px solid rgba(26,26,26,.45);
+  color: var(--ink);
+  font: inherit; font-size: 16px;
+  padding: 8px 0;
+  outline: none;
+  border-radius: 0;
+}
+.field input[type="text"]::placeholder { color: rgba(26,26,26,.35); }
+.field input[type="text"]:focus, .field select:focus { border-bottom-color: var(--c-olive); }
+.select { position: relative; display: block; }
+.select select { appearance: none; -webkit-appearance: none; padding-right: 28px; cursor: pointer; }
+.select::after {
+  content: ""; position: absolute; right: 6px; top: 50%;
+  width: 8px; height: 8px; border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink);
+  transform: translateY(-70%) rotate(45deg); pointer-events: none;
+}
+.radio {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 15px; padding: 6px 0; cursor: pointer;
+}
+.radio input { position: absolute; opacity: 0; width: 0; height: 0; }
+.radio span {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 1.5px solid var(--c-olive);
+  position: relative; flex: 0 0 auto;
+}
+.radio input:checked + span::after {
+  content: ""; position: absolute; inset: 3px; border-radius: 50%;
+  background: var(--c-olive);
+}
+.form .btn { display: block; margin: 8px auto 0; }
+.form__ok, .form__error { text-align: center; margin-top: 16px; }
+.form__error { color: var(--c-deep); }
+.field.is-invalid input { border-bottom-color: var(--c-deep); }
+.form.is-sending .btn { opacity: .6; pointer-events: none; }
+
+/* --- Footer --- */
+.footer { padding-bottom: 64px; }
+
+/* --- Reduce motion --- */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
