@@ -82,25 +82,63 @@ body::before {
   .card { margin: 48px auto; }
 }
 
+/* --- Selector de idioma --- */
+.idiomas {
+  position: absolute; top: 14px; right: 14px; z-index: 2;
+  display: flex; gap: 6px; direction: ltr;
+}
+[dir="rtl"] .idiomas { right: auto; left: 14px; }
+.idiomas button {
+  font: inherit; font-size: 13px; letter-spacing: .04em;
+  padding: 5px 11px; border-radius: 999px;
+  border: 1px solid rgba(246,243,238,.7);
+  background: transparent; color: var(--paper);
+  cursor: pointer;
+}
+.idiomas button.is-active { background: var(--paper); color: var(--c-olive); border-color: var(--paper); }
+.idiomas button[lang="he"] { font-family: Heebo, var(--body); }
+.hero { padding-top: 64px; }
+
+/* --- Hebreo: fuentes con glifos hebreos y lectura de derecha a izquierda --- */
+[data-lang="he"] body, [data-lang="he"] .body, [data-lang="he"] .lead, [data-lang="he"] .tip__text,
+[data-lang="he"] .field > span:first-child, [data-lang="he"] .field legend, [data-lang="he"] .radio,
+[data-lang="he"] .field select, [data-lang="he"] .btn, [data-lang="he"] .countdown small, [data-lang="he"] .muted {
+  font-family: Heebo, var(--body);
+}
+[data-lang="he"] h2.script, [data-lang="he"] .tip__label, [data-lang="he"] .firma {
+  font-family: "Frank Ruhl Libre", serif; font-weight: 300; letter-spacing: .02em;
+}
+[data-lang="he"] h2.script { font-size: clamp(34px, 9vw, 46px); }
+[data-lang="he"] h2.script--xl { font-size: clamp(44px, 12vw, 64px); }
+[data-lang="he"] .tip__label { font-size: clamp(22px, 6vw, 28px); }
+[data-lang="he"] .firma { font-size: clamp(30px, 8vw, 40px); }
+[data-lang="he"] .kicker { font-family: "Frank Ruhl Libre", serif; letter-spacing: .12em; }
+[data-lang="he"] .lugar, [data-lang="he"] .display { font-family: var(--display); }
+[data-lang="he"] .jupa__lista .que { font-family: Heebo, var(--body); }
+[dir="rtl"] .tip__arrow { margin-left: auto; margin-right: 10%; transform: scaleX(-1); }
+[dir="rtl"] .select::after { right: auto; left: 6px; }
+[dir="rtl"] .select select { padding-right: 0; padding-left: 28px; }
+
 /* --- Secciones --- */
 .section {
   padding: 56px var(--pad);
   text-align: center;
 }
 .section--tight { padding-top: 24px; }
-.section--olive {
-  background-color: var(--c-olive);
+/* Secciones de color: comparten texto en papel e ilustraciones invertidas */
+.section--khaki, .section--olive, .section--terracotta, .section--clay, .section--deep {
   background-image: var(--grain);
   color: var(--paper);
 }
-.section--terracotta {
-  background-color: var(--c-terracotta);
-  background-image: var(--grain);
-  color: var(--paper);
-}
-.section--olive .script, .section--terracotta .script { color: var(--paper); }
-.section--olive .muted, .section--terracotta .muted { color: rgba(246,243,238,.75); }
-.section--olive .illo img, .section--terracotta .illo img { filter: invert(1) brightness(1.02); }
+.section--khaki { background-color: var(--c-khaki); }
+.section--olive { background-color: var(--c-olive); }
+.section--terracotta { background-color: var(--c-terracotta); }
+.section--clay { background-color: var(--c-clay); }
+.section--deep { background-color: var(--c-deep); }
+.section--khaki .script, .section--olive .script, .section--terracotta .script, .section--clay .script, .section--deep .script,
+.section--khaki .lead, .section--olive .lead, .section--terracotta .lead, .section--clay .lead, .section--deep .lead { color: var(--paper); }
+.section--khaki .muted, .section--olive .muted, .section--terracotta .muted, .section--clay .muted, .section--deep .muted { color: rgba(246,243,238,.75); }
+.section--khaki .illo img, .section--olive .illo img, .section--terracotta .illo img, .section--clay .illo img, .section--deep .illo img { filter: invert(1) brightness(1.02); }
 
 /* --- Tipografía --- */
 .script {
@@ -111,6 +149,7 @@ body::before {
   margin: 0 0 18px;
 }
 h2.script { font-size: clamp(38px, 10vw, 52px); }
+h2.script--xl { font-size: clamp(50px, 14vw, 72px); }
 .names {
   font-size: clamp(48px, 13vw, 68px);
   margin: 8px 0 12px;
@@ -214,16 +253,6 @@ h2.script { font-size: clamp(38px, 10vw, 52px); }
   letter-spacing: .08em;
 }
 
-/* --- Sección arcilla --- */
-.section--clay {
-  background-color: var(--c-clay);
-  background-image: var(--grain);
-  color: var(--paper);
-}
-.section--clay .script { color: var(--paper); }
-.section--clay .muted { color: rgba(246,243,238,.75); }
-.section--clay .illo img { filter: invert(1) brightness(1.02); }
-
 /* --- Tip de las novias (reutilizable) --- */
 .tip {
   max-width: 36ch;
@@ -242,8 +271,8 @@ h2.script { font-size: clamp(38px, 10vw, 52px); }
   color: inherit;
 }
 .tip__text { margin: 0 auto; font-size: 16px; line-height: 1.55; text-align: center; }
-.section--clay .tip__label, .section--olive .tip__label, .section--terracotta .tip__label { color: var(--paper); }
-.card > .section:not(.section--clay):not(.section--olive):not(.section--terracotta) .tip__label { color: var(--c-olive); }
+.tip__label { color: var(--c-olive); }
+.section--khaki .tip__label, .section--olive .tip__label, .section--terracotta .tip__label, .section--clay .tip__label, .section--deep .tip__label { color: var(--paper); }
 
 /* --- La previa: playlists --- */
 .illo--disco { width: min(46%, 200px); margin: 0 auto 6px; }
@@ -256,6 +285,10 @@ h2.script { font-size: clamp(38px, 10vw, 52px); }
 }
 .playlist__nombre { font-size: 24px; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 4px; }
 .playlist--pronto .small { margin: 0; }
+
+/* --- ¿Y qué hacemos después? --- */
+.illo--mano { width: min(70%, 320px); margin: 0 auto 6px; }
+.section--despues .btn { max-width: 30ch; line-height: 1.4; }
 
 /* --- Paleta --- */
 .paleta {
@@ -292,12 +325,15 @@ h2.script { font-size: clamp(38px, 10vw, 52px); }
 .countdown > div { display: flex; flex-direction: column; align-items: center; min-width: 52px; }
 .countdown .display { font-size: clamp(30px, 8vw, 40px); line-height: 1; }
 .countdown small { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin-top: 6px; color: var(--ink-soft); }
+.section--olive .marco, .section--olive .marco::before, .section--olive .marco::after { border-color: var(--paper); }
+.section--olive .countdown small { color: rgba(246,243,238,.8); }
 
 /* --- Formulario (sobre papel) --- */
 .section--form { text-align: left; }
 .section--form h2, .section--form > .body { text-align: center; }
 .form { max-width: 420px; margin: 24px auto 0; }
 .field { display: block; margin-bottom: 24px; border: 0; padding: 0; }
+.opcional { font-style: normal; opacity: .6; font-size: 12px; }
 .field > span:first-child, .field legend {
   display: block; font-size: 14px; letter-spacing: .04em; margin-bottom: 8px;
   color: var(--ink-soft);
@@ -326,6 +362,7 @@ h2.script { font-size: clamp(38px, 10vw, 52px); }
   font-size: 15px; padding: 6px 0; cursor: pointer;
 }
 .radio input { position: absolute; opacity: 0; width: 0; height: 0; }
+.radio em { font-style: normal; }
 .radio span {
   width: 18px; height: 18px; border-radius: 50%;
   border: 1.5px solid var(--c-olive);

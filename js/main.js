@@ -38,7 +38,7 @@
       nombre: '',                // ej. 'entry.1234567890'
       asiste: '',
       restriccion: '',
-      bebida: ''
+      mancha: ''
     }
   };
 
@@ -64,13 +64,13 @@
         nombre: nombre,
         asiste: form.querySelector('input[name="asiste"]:checked').value,
         restriccion: form.restriccion.value,
-        bebida: form.bebida.value.trim()
+        mancha: form.mancha.value
       };
 
       if (!GOOGLE_FORM.FORM_ID) {
         // Todavía no está conectado el Google Form: avisamos y no perdemos la respuesta.
         console.warn('Google Form sin configurar. Respuesta:', datos);
-        ok.textContent = 'Formulario en preparación. ¡Gracias por la paciencia!';
+        ok.textContent = (window.I18N[window.LANG] || window.I18N.es).form_pendiente;
         ok.hidden = false;
         return;
       }

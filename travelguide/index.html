@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es" data-keep-title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía de las novias · Mari & Dana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Heebo:wght@300;400;500&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .guia { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+  .guia .illo--mano { width: min(80%, 360px); margin: 10px auto 24px; }
+  .guia .kicker { margin-top: 0; }
+</style>
+</head>
+<body>
+<main class="card">
+  <nav class="idiomas" aria-label="Idioma">
+    <button type="button" data-lang="es" lang="es">Salú</button>
+    <button type="button" data-lang="pt" lang="pt-BR">Saúde</button>
+    <button type="button" data-lang="he" lang="he">לחיים</button>
+  </nav>
+  <section class="section section--olive guia">
+    <h1 class="script" data-i18n="guia_titulo" style="font-size:clamp(40px,11vw,56px);margin-top:40px">Guía de las novias</h1>
+    <p class="kicker display" data-i18n="guia_sub">Una semana en Uruguay</p>
+    <figure class="illo illo--mano"><img src="../img/la-mano.svg" alt="La Mano de Punta del Este"></figure>
+    <p class="body" data-i18n="guia_pronto">Estamos armando los piques. ¡Muy pronto!</p>
+    <a class="btn" href="../" data-keep-lang="../" data-i18n="guia_volver" style="border-color:var(--paper);color:var(--paper);background:transparent">Volver a la invitación</a>
+  </section>
+</main>
+<script src="../js/i18n.js"></script>
+</body>
+</html>

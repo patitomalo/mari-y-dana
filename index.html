@@ -7,42 +7,49 @@
 <meta name="description" content="Nos casamos. 13 de diciembre de 2026, Punta del Este, Uruguay.">
 <meta property="og:title" content="Mari & Dana · Nos casamos">
 <meta property="og:description" content="13 de diciembre de 2026 · Punta del Este, Uruguay">
-<meta property="og:image" content="https://patitomalo.github.io/mari-y-dana/img/banco-13-12-A.svg">
+<meta property="og:image" content="https://patitomalo.github.io/mari-y-dana/img/banco-13-dic-A.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Heebo:wght@300;400;500&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <main class="card">
 
+  <!-- IDIOMAS -->
+  <nav class="idiomas" aria-label="Idioma">
+    <button type="button" data-lang="es" lang="es">Salú</button>
+    <button type="button" data-lang="pt" lang="pt-BR">Saúde</button>
+    <button type="button" data-lang="he" lang="he">לחיים</button>
+  </nav>
+
   <!-- HERO -->
-  <header class="hero section">
+  <header class="hero section section--olive">
     <p class="names script">Mari <span class="amp">&amp;</span> Dana</p>
     <figure class="illo illo--hero">
-      <img src="img/banco-13-12-A.svg" alt="Mari y Dana sentadas en un banco con carteles 13 y 12">
+      <img src="img/banco-13-dic-A.svg" alt="Mari y Dana sentadas en un banco con carteles 13 DIC">
     </figure>
-    <p class="lead">Con mucha emoción y alegría las invitamos a compartir con nosotras uno de los días más lindos de nuestras vidas.</p>
+    <p class="lead" data-i18n="lead">¡Con mucha emoción y alegría, te invitamos a compartir con nosotras nuestro día especial!</p>
   </header>
 
   <!-- NOS CASAMOS -->
   <section class="section section--tight">
-    <h2 class="script">¡Nos casamos!</h2>
-    <p class="body">La celebración va a ser en</p>
+    <h2 class="script script--xl" data-i18n="casamos">¡Nos casamos!</h2>
+    <p class="body" data-i18n="lugar_intro">La celebración va a ser en</p>
     <p class="body strong lugar">Toda Flor</p>
-    <p class="body muted">Punta del Este, Uruguay</p>
-    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Toda+Flor+Punta+del+Este" target="_blank" rel="noopener">Abrir mapa</a>
+    <p class="body muted" data-i18n="lugar_ciudad">Punta del Este, Uruguay</p>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Toda+Flor+Punta+del+Este" target="_blank" rel="noopener" data-i18n="btn_mapa">Abrir mapa</a>
   </section>
 
   <!-- LA CELEBRACIÓN -->
-  <section class="section section--terracotta section--celebracion">
-    <h2 class="script">La celebración</h2>
+  <section class="section section--clay section--celebracion">
+    <h2 class="script" data-i18n="celebracion">La celebración</h2>
     <div class="jupa">
       <img class="jupa__img" src="img/jupa.svg" alt="Jupá decorada con flores">
       <ol class="jupa__lista">
-        <li><span class="hora display">12:30</span><span class="que">recepción</span></li>
-        <li><span class="hora display">13:30</span><span class="que">jupá</span></li>
+        <li><span class="hora display">12:30</span><span class="que" data-i18n="recepcion">recepción</span></li>
+        <li><span class="hora display">13:30</span><span class="que" data-i18n="jupa">jupá</span></li>
       </ol>
     </div>
   </section>
@@ -50,65 +57,72 @@
   <!-- CONFIRMACIÓN -->
   <section class="section section--form" id="confirmacion">
     <figure class="illo illo--ramo"><img src="img/ramo.svg" alt=""></figure>
-    <h2 class="script">Confirmación</h2>
-    <p class="body">Tus respuestas nos ayudan a organizar la fiesta.</p>
+    <h2 class="script" data-i18n="confirmacion">Confirmación</h2>
+    <p class="body" data-i18n="conf_intro">Tus respuestas nos ayudan a organizar la fiesta.</p>
 
     <form class="form" id="rsvp" novalidate>
       <label class="field">
-        <span>Nombre y apellido</span>
+        <span data-i18n="f_nombre">Nombre y apellido</span>
         <input type="text" name="nombre" autocomplete="name" required>
       </label>
 
       <fieldset class="field">
-        <legend>¿Venís?</legend>
-        <label class="radio"><input type="radio" name="asiste" value="Sí, ya me estoy preparando" checked><span></span>Sí, ya me estoy preparando</label>
-        <label class="radio"><input type="radio" name="asiste" value="Voy a tener que acompañarlas desde lejos"><span></span>Voy a tener que acompañarlas desde lejos</label>
+        <legend data-i18n="f_venis">¿Venís?</legend>
+        <label class="radio"><input type="radio" name="asiste" value="Sí, ya me estoy preparando" checked><span></span><em data-i18n="opt_si">Sí, ya me estoy preparando</em></label>
+        <label class="radio"><input type="radio" name="asiste" value="Voy a tener que acompañarlas desde lejos"><span></span><em data-i18n="opt_lejos">Voy a tener que acompañarlas desde lejos</em></label>
       </fieldset>
 
       <label class="field">
-        <span>¿Tenés alguna alergia o restricción alimentaria?</span>
+        <span data-i18n="f_restriccion">¿Tenés alguna alergia o restricción alimentaria?</span>
         <span class="select">
           <select name="restriccion">
-            <option value="No">No</option>
-            <option value="Vegetariano / vegano">Vegetariano / vegano</option>
-            <option value="Gluten free">Gluten free</option>
-            <option value="Kosher">Kosher</option>
+            <option value="No" data-i18n="r_no">No</option>
+            <option value="Vegetariano" data-i18n="r_vegetariano">Vegetariano</option>
+            <option value="Vegano" data-i18n="r_vegano">Vegano</option>
+            <option value="Gluten free" data-i18n="r_gluten">Gluten free</option>
+            <option value="Kosher" data-i18n="r_kosher">Kosher</option>
           </select>
         </span>
       </label>
 
       <label class="field">
-        <span>¿Qué te gusta tomar?</span>
-        <input type="text" name="bebida" placeholder="Vino, cerveza, sin alcohol…">
+        <span data-i18n="f_mancha">¿Quién es más probable que se manche el vestido el día del casamiento?</span>
+        <span class="select">
+          <select name="mancha">
+            <option value="" data-i18n="m_vacio">Sin rencores…</option>
+            <option value="Mari">Mari</option>
+            <option value="Dana">Dana</option>
+          </select>
+        </span>
       </label>
 
-      <button class="btn btn--dark" type="submit">Enviar</button>
-      <p class="form__ok body" hidden>¡Gracias! Ya recibimos tu confirmación.</p>
-      <p class="form__error body" hidden>No pudimos enviar la respuesta. Probá de nuevo en un rato.</p>
+      <button class="btn btn--dark" type="submit" data-i18n="btn_enviar">Enviar</button>
+      <p class="form__ok body" hidden data-i18n="form_ok">¡Gracias! Ya recibimos tu confirmación.</p>
+      <p class="form__error body" hidden data-i18n="form_error">No pudimos enviar la respuesta. Probá de nuevo en un rato.</p>
     </form>
   </section>
 
   <!-- DRESS CODE -->
-  <section class="section section--clay">
-    <h2 class="script">Dress code</h2>
+  <section class="section section--khaki">
+    <h2 class="script" data-i18n="dresscode">Dress code</h2>
     <figure class="illo illo--dress">
       <img src="img/dress-code.svg" alt="Vestido midi estampado y camisa con pantalón">
     </figure>
-    <p class="kicker display">Cocktail</p>
-    <p class="body">Usá lo que te haga sentir cómodo/a. Va a ser una fiesta de día en una chacra.</p>
+    <p class="kicker display" data-i18n="cocktail">Cocktail</p>
+    <p class="body" data-i18n="dress_texto">¡Queremos que disfrutes y que estés cómodo/a! Va a ser una fiesta de día en una chacra. No hace falta traje completo ni vestidos largos (¡a menos que tengas ganas!).</p>
 
     <aside class="tip">
       <svg class="tip__arrow" viewBox="0 0 50 80" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4 C4 24 6 48 26 70"/><path d="M14 64 L26 71 L30 58"/></svg>
-      <p class="tip__label script">tip de las novias</p>
-      <p class="tip__text">Te recomendamos llevar lentes de sol, zapatos cómodos para no parar de bailar, y un abriguito porque a la noche refresca.</p>
+      <p class="tip__label script" data-i18n="tip_label">tip de las novias</p>
+      <p class="tip__text" data-i18n="tip_texto">Te recomendamos llevar lentes de sol y un abriguito porque a la noche refresca. Ah, y los tacos pueden no ser la mejor idea por el pasto… ¡Vení con zapatos cómodos para bailar toda la fiesta!</p>
     </aside>
   </section>
 
-  <!-- LA PREVIA -->
+  <!-- PARA LLEGAR PREPARADOS -->
   <section class="section section--previa">
     <figure class="illo illo--disco"><img src="img/bola-disco.svg" alt="Bola de espejos"></figure>
-    <h2 class="script">La previa</h2>
-    <p class="body">Nuestro corazón vive repartido en tres ciudades y queremos sentirlas cerca ese día. Andá entrando en clima con los temas que van a sonar.</p>
+    <h2 class="script" data-i18n="previa">Para llegar preparados</h2>
+    <p class="body" data-i18n="previa_texto">Nuestro corazón vive repartido en tres países y queremos sentirlos cerca ese día. Dana dice que estudien estas playlists para llegar preparados. Mari dice «tchu tcha tcha tchu tchu tcha».</p>
 
     <div class="playlists">
       <div class="playlist">
@@ -118,48 +132,49 @@
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
           title="Playlist de Mari y Dana"></iframe>
       </div>
-      <div class="playlist playlist--pronto">
-        <p class="display playlist__nombre">Fernet con coca</p>
-        <p class="muted small">Playlist uruguaya · próximamente</p>
+      <div class="playlist">
+        <iframe
+          src="https://open.spotify.com/embed/playlist/3jK7gjMEKs8JQBIpfG9vEq?utm_source=generator&theme=0"
+          width="100%" height="352" frameborder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+          title="Playlist de Mari y Dana"></iframe>
       </div>
-      <div class="playlist playlist--pronto">
-        <p class="display playlist__nombre">Arak</p>
-        <p class="muted small">Playlist israelí · próximamente</p>
+      <div class="playlist">
+        <iframe
+          src="https://open.spotify.com/embed/playlist/23b3dKSQx3tUEXEGhmHPzU?utm_source=generator&theme=0"
+          width="100%" height="352" frameborder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+          title="Playlist de Mari y Dana"></iframe>
       </div>
     </div>
   </section>
 
   <!-- REGALOS -->
-  <section class="section section--olive">
-    <div class="label-row">
-      <h2 class="script">Regalos</h2>
-      <span class="arrow arrow--flip" aria-hidden="true">
-        <svg viewBox="0 0 60 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6 C20 4 40 10 50 30"/><path d="M42 26 L50 31 L54 22"/></svg>
-      </span>
-    </div>
+  <section class="section section--deep">
+    <h2 class="script" data-i18n="regalos">Regalos</h2>
     <figure class="illo illo--regalos">
       <img src="img/regalos.svg" alt="Regalos apilados">
     </figure>
-    <p class="body">El mejor regalo es que vengas. Si además querés ayudarnos a empezar esta etapa, vamos a agradecer cualquier aporte, por simbólico que sea.</p>
-    <p class="body muted">Datos de la cuenta a confirmar</p>
+    <p class="body" data-i18n="regalos_texto">El mejor regalo es que vengas a compartir este día con nosotras. Si además querés ayudarnos a empezar esta nueva etapa, acá están nuestros datos:</p>
+    <p class="body muted" data-i18n="regalos_pendiente">Datos de la cuenta a confirmar</p>
   </section>
 
-  <!-- CONTACTO -->
-  <section class="section section--tight">
-    <h2 class="script">Contacto</h2>
-    <p class="body">Cualquier duda, escribinos. Vamos a estar felices de responder.</p>
-    <a class="btn" href="https://wa.me/598XXXXXXXX" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  <!-- Y DESPUÉS -->
+  <section class="section section--despues">
+    <h2 class="script" data-i18n="despues">¿Y qué hacemos después?</h2>
+    <figure class="illo illo--mano"><img src="img/la-mano.svg" alt="La Mano de Punta del Este"></figure>
+    <a class="btn" href="travelguide/" data-keep-lang="travelguide/" data-i18n="guia_link">Guía de las novias para una semana en Uruguay</a>
   </section>
 
   <!-- CUENTA REGRESIVA -->
-  <section class="section section--count">
+  <section class="section section--olive section--count">
     <div class="marco">
-      <h2 class="script">Nos vemos en…</h2>
-      <div class="countdown" data-target="2026-12-13T16:00:00-03:00">
-        <div><span class="display" data-unit="d">00</span><small>días</small></div>
-        <div><span class="display" data-unit="h">00</span><small>horas</small></div>
-        <div><span class="display" data-unit="m">00</span><small>min</small></div>
-        <div><span class="display" data-unit="s">00</span><small>seg</small></div>
+      <h2 class="script" data-i18n="nos_vemos">Nos vemos en…</h2>
+      <div class="countdown" data-target="2026-12-13T12:30:00-03:00">
+        <div><span class="display" data-unit="d">00</span><small data-i18n="dias">días</small></div>
+        <div><span class="display" data-unit="h">00</span><small data-i18n="horas">horas</small></div>
+        <div><span class="display" data-unit="m">00</span><small data-i18n="min">min</small></div>
+        <div><span class="display" data-unit="s">00</span><small data-i18n="seg">seg</small></div>
       </div>
       <figure class="illo illo--anillos"><img src="img/anillos.svg" alt=""></figure>
     </div>
@@ -168,14 +183,15 @@
   <!-- CIERRE -->
   <footer class="section footer">
     <figure class="illo illo--footer">
-      <img src="img/carteles-13-12-A.svg" alt="Mari y Dana con carteles 13 y 12">
+      <img src="img/carteles-13-dic-A.svg" alt="Mari y Dana con carteles 13 DIC">
     </figure>
-    <p class="script firma">Con amor,<br>Mari &amp; Dana</p>
+    <p class="script firma" data-i18n="firma" data-i18n-html>Con amor,<br>Mari &amp; Dana</p>
     <p class="display small-date">13 · 12 · 2026</p>
   </footer>
 
 </main>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
