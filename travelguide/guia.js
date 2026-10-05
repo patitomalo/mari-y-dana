@@ -35,4 +35,9 @@
     z.lugares.forEach(function (l) { todos.push(l); });
   });
 
+  // "Ver en mapa": mapa compartido de Google My Maps con todos los lugares.
+  // Si se deja vacío, el botón queda oculto.
+  var LISTA_GOOGLE_MAPS = 'https://www.google.com/maps/d/viewer?mid=1IElQ0j61CTQfa-oFV-4VLtgs3JVgeUo';
+  var btn = document.getElementById('btn-mapa-todos');
+  if (btn && LISTA_GOOGLE_MAPS) { btn.href = LISTA_GOOGLE_MAPS; btn.hidden = false; }
 })();
