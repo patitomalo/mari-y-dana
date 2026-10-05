@@ -45,7 +45,15 @@ window.I18N = {
     guia_titulo: 'Guía de las novias',
     guia_sub: 'Una semana en Uruguay',
     guia_pronto: 'Estamos armando los piques. ¡Muy pronto!',
-    guia_volver: 'Volver a la invitación'
+    guia_volver: 'Volver a la invitación',
+    guia_intro: 'Nuestros lugares para comer, tomar algo y pasar el día.',
+    guia_mapa_todos: 'Ver en mapa',
+    guia_zonas: 'Elegí una zona',
+    guia_salir: 'Para salir a tomar algo',
+    guia_salir_texto: 'O para una cita. Los que nunca fallan.',
+    guia_fiestas: 'Si te quedás hasta fin de año',
+    guia_fiestas_texto: 'Primeras fechas del verano en Punta. Las que dicen TBC todavía no están confirmadas.',
+    guia_creditos: 'Piques con la ayuda de @priscilabel_ y @lucia_dibello. Los comentarios están en español.'
   },
 
   pt: {
@@ -91,7 +99,15 @@ window.I18N = {
     guia_titulo: 'Guia das noivas',
     guia_sub: 'Uma semana no Uruguai',
     guia_pronto: 'Estamos montando as dicas. Em breve!',
-    guia_volver: 'Voltar ao convite'
+    guia_volver: 'Voltar ao convite',
+    guia_intro: 'Nossos lugares para comer, beber algo e passar o dia.',
+    guia_mapa_todos: 'Ver no mapa',
+    guia_zonas: 'Escolha uma região',
+    guia_salir: 'Para sair para beber algo',
+    guia_salir_texto: 'Ou para um date. Os que nunca falham.',
+    guia_fiestas: 'Se você ficar até o fim do ano',
+    guia_fiestas_texto: 'Primeiras datas do verão em Punta. As que dizem TBC ainda não estão confirmadas.',
+    guia_creditos: 'Dicas com a ajuda de @priscilabel_ e @lucia_dibello. Os comentários estão em espanhol.'
   },
 
   he: {
@@ -137,7 +153,15 @@ window.I18N = {
     guia_titulo: 'המדריך של הכלות',
     guia_sub: 'שבוע באורוגוואי',
     guia_pronto: 'אנחנו מכינות את הטיפים. בקרוב מאוד!',
-    guia_volver: 'חזרה להזמנה'
+    guia_volver: 'חזרה להזמנה',
+    guia_intro: 'המקומות שלנו לאכול, לשתות משהו ולבלות את היום.',
+    guia_mapa_todos: 'לראות במפה',
+    guia_zonas: 'בחרו אזור',
+    guia_salir: 'לצאת לשתות משהו',
+    guia_salir_texto: 'או לדייט. אלה שאף פעם לא מאכזבים.',
+    guia_fiestas: 'אם נשארים עד סוף השנה',
+    guia_fiestas_texto: 'התאריכים הראשונים של הקיץ בפונטה. מה שמסומן TBC עדיין לא מאושר.',
+    guia_creditos: 'טיפים בעזרת @priscilabel_ ו־@lucia_dibello. ההערות בספרדית.'
   }
 };
 
