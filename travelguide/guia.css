@@ -110,3 +110,25 @@
 .zona h2, .zona .zona__sub { text-align: left; }
 .zonas__titulo { margin: 0 0 12px; max-width: none; }
 [dir="rtl"] .zona h2, [dir="rtl"] .zona .zona__sub { text-align: right; }
+
+/* --- Corrección: solo la lista va a la izquierda --- */
+.destino--centro, .destino--centro h2, .destino--centro .body { text-align: center; }
+.destino--centro .body { margin-left: auto; margin-right: auto; }
+.destino--centro .tip { margin-left: auto; margin-right: auto; text-align: center; }
+.destino--centro .tip__label, .destino--centro .tip__text { text-align: center; }
+.destino--centro .tip__arrow { margin: 2px 0 2px 10%; }
+.illo--mate { width: min(70%, 320px); margin: 6px auto 18px; }
+.zonas, .zonas__titulo { text-align: center; }
+.zonas .chips { justify-content: center; }
+.zonas .btn-mapa { margin-left: auto; margin-right: auto; }
+.zona h2, .zona .zona__sub { text-align: center; }
+[dir="rtl"] .destino--centro, [dir="rtl"] .destino--centro h2, [dir="rtl"] .destino--centro .body, [dir="rtl"] .zona h2, [dir="rtl"] .zona .zona__sub { text-align: center; }
+[dir="rtl"] .zonas .chips { justify-content: center; }
+
+/* CTA "¿Y dónde comemos?" centrado, con chivito */
+.destino--cta { display: block; text-align: center; }
+.destino--cta h2 { text-align: center; }
+.destino--cta .btn { margin-top: 10px; }
+.illo--chivito { width: min(78%, 360px); margin: 0 auto 4px; }
+.illo--chivito img { display: block; width: 100%; height: auto; }
+[dir="rtl"] .destino--cta, [dir="rtl"] .destino--cta h2 { text-align: center; }
