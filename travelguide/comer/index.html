@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es" data-keep-title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dónde comer · Guía de las novias</title>
+<meta name="description" content="Una semana en Uruguay: los piques de Mari y Dana para comer, tomar algo y salir en Punta del Este, La Barra, Manantiales y José Ignacio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Heebo:wght@300;400;500&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../guia.css">
+</head>
+<body>
+<main class="card">
+  <nav class="idiomas" aria-label="Idioma">
+    <button type="button" data-lang="es" lang="es">Salú</button>
+    <button type="button" data-lang="pt" lang="pt-BR">Saúde</button>
+    <button type="button" data-lang="he" lang="he">לחיים</button>
+  </nav>
+
+  <!-- PORTADA -->
+  <header class="section section--olive guia-hero">
+    <h1 class="script" data-i18n="comer_titulo">Dónde comer</h1>
+    <p class="kicker display" data-i18n="guia_titulo">Guía de las novias</p>
+    <figure class="illo illo--mano"><img src="../../img/la-mano.svg" alt="La Mano de Punta del Este"></figure>
+    <p class="body" data-i18n="guia_intro">Nuestros lugares para comer, tomar algo y pasar el día.</p>
+    <a class="btn btn--paper" href="../" data-keep-lang="../" data-i18n="comer_volver">Volver a la guía</a>
+  </header>
+
+  <!-- ÍNDICE -->
+  <nav class="section section--tight zonas" aria-label="Zonas">
+    <p class="body muted small" data-i18n="guia_zonas">Elegí una zona</p>
+    <div class="chips" id="chips"></div>
+    <a class="btn btn-mapa" id="btn-mapa-todos" href="#" target="_blank" rel="noopener" hidden data-i18n="guia_mapa_todos">Ver en mapa</a>
+  </nav>
+
+  <!-- ZONAS (se arman desde piques.js) -->
+  <div id="zonas"></div>
+
+</main>
+
+<script src="../../js/i18n.js"></script>
+<script src="../piques.js"></script>
+<script src="../guia.js"></script>
+</body>
+</html>

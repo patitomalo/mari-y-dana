@@ -52,3 +52,17 @@
 [dir="rtl"] .pique__ig { margin-left: 0; margin-right: 6px; }
 [dir="rtl"] .zona { text-align: right; }
 [data-lang="he"] .pique__nombre, [data-lang="he"] .pique__nota { font-family: Heebo, var(--body); }
+
+/* --- Portada de destino --- */
+.destino { text-align: center; }
+.destino .body { margin-bottom: 14px; }
+.destino .tip { margin-top: 28px; }
+.planes { list-style: none; max-width: 36ch; margin: 8px auto 0; padding: 0; text-align: left; }
+.planes li { padding: 14px 0; border-top: 1px solid rgba(246,243,238,.35); }
+.planes li:first-child { border-top: 0; }
+.planes .pique__link { font-weight: 500; font-size: 16px; }
+.planes p { margin: 4px 0 0; font-size: 15px; line-height: 1.5; opacity: .92; }
+.destino--cta { padding-top: 40px; }
+.destino--cta .illo--brindis { margin-bottom: 8px; }
+[dir="rtl"] .planes { text-align: right; }
+[data-lang="he"] .planes .pique__link, [data-lang="he"] .planes p { font-family: Heebo, var(--body); }
