@@ -73,3 +73,40 @@
 .plan--illo { text-align: center; }
 .plan--illo .pique__link { display: inline-block; }
 .plan--illo p { text-align: center; }
+
+/* --- Guía alineada a la izquierda, dibujos a los costados --- */
+.guia-hero--side { text-align: left; display: grid; grid-template-columns: 1.15fr .85fr; gap: 10px; align-items: center; }
+.guia-hero--side h1 { font-size: clamp(36px, 9.5vw, 50px); }
+.guia-hero--side .kicker { font-size: 15px; letter-spacing: .2em; text-indent: 0; }
+.guia-hero--side .body { margin-left: 0; margin-right: 0; font-size: 15px; }
+.guia-hero--side .btn { margin-top: 6px; }
+.illo--mano-side { width: 100%; margin: 0; }
+.destino { text-align: left; }
+.destino h2, .destino .body { text-align: left; margin-left: 0; margin-right: 0; }
+.destino .body { max-width: 40ch; }
+.tip--izq { margin-left: 0; text-align: left; }
+.tip--izq .tip__arrow { margin-left: 4px; }
+.tip--izq .tip__label, .tip--izq .tip__text { text-align: left; margin-left: 0; }
+.planes { margin-left: 0; max-width: none; }
+.plan--illo { text-align: left; overflow: hidden; }
+.plan--illo .pique__link { display: inline-block; }
+.plan--illo p { text-align: left; }
+.plan--illo .plan__illo { width: 42%; max-width: 190px; margin: 0; }
+.plan--der .plan__illo { float: right; margin: 0 0 6px 16px; }
+.plan--izq .plan__illo { float: left; margin: 0 16px 6px 0; }
+.destino--cta { display: grid; grid-template-columns: .8fr 1.2fr; gap: 14px; align-items: center; text-align: left; }
+.illo--brindis-side { width: 100%; margin: 0; }
+.destino--cta .btn { margin-top: 8px; }
+.zonas { text-align: left; }
+.zonas .chips { justify-content: flex-start; }
+.zonas .btn-mapa { margin-left: 0; }
+.zonas__titulo { margin-left: 0; }
+[dir="rtl"] .guia-hero--side, [dir="rtl"] .destino, [dir="rtl"] .destino h2, [dir="rtl"] .destino .body, [dir="rtl"] .tip--izq, [dir="rtl"] .tip--izq .tip__label, [dir="rtl"] .tip--izq .tip__text, [dir="rtl"] .plan--illo, [dir="rtl"] .plan--illo p, [dir="rtl"] .zonas { text-align: right; }
+[dir="rtl"] .plan--der .plan__illo { float: left; margin: 0 16px 6px 0; }
+[dir="rtl"] .plan--izq .plan__illo { float: right; margin: 0 0 6px 16px; }
+[dir="rtl"] .zonas .chips { justify-content: flex-end; }
+.destino--cta h2 { text-align: left; font-size: clamp(32px, 8.5vw, 44px); }
+[dir="rtl"] .destino--cta h2 { text-align: right; }
+.zona h2, .zona .zona__sub { text-align: left; }
+.zonas__titulo { margin: 0 0 12px; max-width: none; }
+[dir="rtl"] .zona h2, [dir="rtl"] .zona .zona__sub { text-align: right; }

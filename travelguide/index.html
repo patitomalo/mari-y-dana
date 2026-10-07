@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Heebo:wght@300;400;500&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="guia.css">
+<link rel="stylesheet" href="guia.css?v=5">
 </head>
 <body>
 <main class="card">
@@ -20,24 +20,26 @@
   </nav>
 
   <!-- PORTADA -->
-  <header class="section section--olive guia-hero">
-    <h1 class="script" data-i18n="guia_titulo">Guía de las novias</h1>
-    <p class="kicker display" data-i18n="guia_sub">Una semana en Uruguay</p>
-    <figure class="illo illo--mano"><img src="../img/la-mano.svg" alt="La Mano de Punta del Este"></figure>
-    <p class="body" data-i18n="lp_intro">Todo lo que tenés que saber de Punta del Este, contado por nosotras.</p>
-    <a class="btn btn--paper" href="../" data-keep-lang="../" data-i18n="guia_volver">Volver a la invitación</a>
+  <header class="section section--olive guia-hero guia-hero--side">
+    <div class="guia-hero__texto">
+      <h1 class="script" data-i18n="guia_titulo">Guía de las novias</h1>
+      <p class="kicker display" data-i18n="guia_sub">Una semana en Uruguay</p>
+      <p class="body" data-i18n="lp_intro">Todo lo que tenés que saber de Punta del Este, contado por nosotras.</p>
+      <a class="btn btn--paper" href="../" data-keep-lang="../" data-i18n="guia_volver">Volver a la invitación</a>
+    </div>
+    <figure class="illo illo--mano-side"><img src="../img/la-mano.svg" alt="La Mano de Punta del Este"></figure>
   </header>
 
   <!-- EL DESTINO -->
   <section class="section destino">
     <h2 class="script" data-i18n="lp_h_punta">Punta del Este</h2>
+    <p class="body" data-i18n="lp_logistica">Desde el aeropuerto de Montevideo son como dos horas. Conviene alquilar auto: los lugares más lindos están desparramados por la Ruta 10. En diciembre hacen entre 22 y 28 grados y se paga con tarjeta casi en todos lados.</p>
     <p class="body" data-i18n="lp_punta_1">Punta es una península que entra en el mar: de un lado está la Brava, con olas y viento, y del otro la Mansa, calma y de aguas tranquilas.</p>
-    <p class="body" data-i18n="lp_punta_2">Regla de oro: la Brava es más linda a la mañana, y la Mansa a la tarde, porque es donde cae el sol.</p>
 
-    <aside class="tip">
+    <aside class="tip tip--izq">
       <svg class="tip__arrow" viewBox="0 0 50 80" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4 C4 24 6 48 26 70"/><path d="M14 64 L26 71 L30 58"/></svg>
       <p class="tip__label script" data-i18n="tip_label">tip de las novias</p>
-      <p class="tip__text" data-i18n="lp_tip">Desde el aeropuerto de Laguna del Sauce son 30 minutos; desde Montevideo, dos horas. Conviene alquilar auto: los lugares lindos están desparramados por la Ruta 10. En diciembre hace entre 22 y 28 grados y se paga con tarjeta casi en todos lados.</p>
+      <p class="tip__text" data-i18n="lp_tip_brava">La Brava es más linda a la mañana, y la Mansa a la tarde, porque es donde cae el sol.</p>
     </aside>
   </section>
 
@@ -46,13 +48,13 @@
     <h2 class="script" data-i18n="lp_h_hacer">Para hacer</h2>
     <ul class="planes">
       <li><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=La+Mano+Punta+del+Este" target="_blank" rel="noopener" data-i18n="lp_p1_t">Los Dedos</a><p data-i18n="lp_p1">La Mano, en Playa Brava. La foto obligada, mejor temprano antes de que se llene.</p></li>
-      <li class="plan--illo"><figure class="plan__illo"><img src="../img/casapueblo.svg" alt="Casapueblo"></figure><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Casapueblo+Punta+Ballena" target="_blank" rel="noopener" data-i18n="lp_p2_t">Casapueblo</a><p data-i18n="lp_p2">La casa-escultura blanca de Páez Vilaró en Punta Ballena. Ir al atardecer: todos los días leen un poema al sol mientras se esconde.</p></li>
+      <li class="plan--illo plan--der"><figure class="plan__illo"><img src="../img/casapueblo.svg" alt="Casapueblo"></figure><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Casapueblo+Punta+Ballena" target="_blank" rel="noopener" data-i18n="lp_p2_t">Casapueblo</a><p data-i18n="lp_p2">La casa-escultura blanca de Páez Vilaró en Punta Ballena. Ir al atardecer: todos los días leen un poema al sol mientras se esconde.</p></li>
       <li><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Museo+Atchugarry+MACA+Manantiales" target="_blank" rel="noopener" data-i18n="lp_p3_t">Museo Atchugarry</a><p data-i18n="lp_p3">Esculturas gigantes al aire libre en un parque enorme, camino a Manantiales. Plan de tarde con picnic.</p></li>
       <li><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Puerto+de+Punta+del+Este" target="_blank" rel="noopener" data-i18n="lp_p4_t">La península y el puerto</a><p data-i18n="lp_p4">Caminar hasta el faro, ver los lobos marinos en el puerto y sentarse en las mesitas de la península a tomar algo.</p></li>
-      <li class="plan--illo"><figure class="plan__illo"><img src="../img/puente-la-barra.svg" alt="Puente de La Barra"></figure><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Puente+de+La+Barra+Leonel+Viera" target="_blank" rel="noopener" data-i18n="lp_p5_t">El puente de La Barra</a><p data-i18n="lp_p5">El puente ondulado que cruza el arroyo Maldonado. Pasarlo en auto es una montaña rusa chiquita; es la puerta a La Barra.</p></li>
+      <li class="plan--illo plan--izq"><figure class="plan__illo"><img src="../img/puente-la-barra.svg" alt="Puente de La Barra"></figure><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Puente+de+La+Barra+Leonel+Viera" target="_blank" rel="noopener" data-i18n="lp_p5_t">El puente de La Barra</a><p data-i18n="lp_p5">El puente ondulado que cruza el arroyo Maldonado. Pasarlo en auto es una montaña rusa chiquita; es la puerta a La Barra.</p></li>
       <li><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Isla+Gorriti" target="_blank" rel="noopener" data-i18n="lp_p6_t">Isla Gorriti</a><p data-i18n="lp_p6">Se cruza en barco desde el puerto en quince minutos. Playas tranquilas y un almuerzo con los pies en la arena.</p></li>
       <li><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Playa+Bikini+Manantiales" target="_blank" rel="noopener" data-i18n="lp_p7_t">Playa Bikini</a><p data-i18n="lp_p7">La playa de Manantiales donde pasa todo: paradores, música y gente linda. Para ver y ser visto.</p></li>
-      <li class="plan--illo"><figure class="plan__illo"><img src="../img/faro-jose-ignacio.svg" alt="Faro de José Ignacio"></figure><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Faro+de+Jos%C3%A9+Ignacio" target="_blank" rel="noopener" data-i18n="lp_p8_t">José Ignacio</a><p data-i18n="lp_p8">Un pueblo de pescadores con faro, a cuarenta minutos por la Ruta 10. Vale pasar el día entero: playa, siesta y cena.</p></li>
+      <li class="plan--illo plan--der"><figure class="plan__illo"><img src="../img/faro-jose-ignacio.svg" alt="Faro de José Ignacio"></figure><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Faro+de+Jos%C3%A9+Ignacio" target="_blank" rel="noopener" data-i18n="lp_p8_t">José Ignacio</a><p data-i18n="lp_p8">Un pueblo de pescadores con faro, a cuarenta minutos por la Ruta 10. Vale pasar el día entero: playa, siesta y cena.</p></li>
       <li><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Arboretum+Lussich" target="_blank" rel="noopener" data-i18n="lp_p9_t">Arboretum Lussich</a><p data-i18n="lp_p9">Un bosque de árboles de todo el mundo en Punta Ballena, para caminar a la sombra cuando el sol aprieta.</p></li>
       <li><a class="pique__link" href="https://www.google.com/maps/search/?api=1&query=Playa+Mansa+parada+8+Punta+del+Este" target="_blank" rel="noopener" data-i18n="lp_p10_t">El atardecer en la Mansa</a><p data-i18n="lp_p10">Cualquier parada de la Mansa sirve, pero la 7 y la 8 tienen paradores para quedarse con un trago hasta que se va el sol.</p></li>
     </ul>
@@ -60,10 +62,12 @@
 
   <!-- DÓNDE COMER -->
   <section class="section destino destino--cta">
-    <figure class="illo illo--brindis"><img src="../img/anteojos-negro-pleno.svg" alt=""></figure>
-    <h2 class="script" data-i18n="lp_h_comer">¿Y dónde comemos?</h2>
-    <p class="body" data-i18n="lp_comer">Nuestros lugares por zona, con un mapa para ver qué tenés cerca.</p>
-    <a class="btn" href="comer/" data-keep-lang="comer/" data-i18n="lp_btn_comer">Dónde comer</a>
+    <figure class="illo illo--brindis-side"><img src="../img/anteojos-negro-pleno.svg" alt=""></figure>
+    <div class="destino--cta__texto">
+      <h2 class="script" data-i18n="lp_h_comer">¿Y dónde comemos?</h2>
+      <p class="body" data-i18n="lp_comer">Nuestros lugares por zona, con un mapa para ver qué tenés cerca.</p>
+      <a class="btn" href="comer/" data-keep-lang="comer/" data-i18n="lp_btn_comer">Dónde comer</a>
+    </div>
   </section>
 </main>
 
