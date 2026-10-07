@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Heebo:wght@300;400;500&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css">
-<link rel="stylesheet" href="../guia.css?v=7">
+<link rel="stylesheet" href="../guia.css?v=8">
 </head>
 <body>
 <main class="card">
@@ -40,8 +40,14 @@
 
 </main>
 
+<nav class="flotante" id="flotante" aria-label="Navegación rápida" hidden>
+  <a href="#top" class="flotante__btn" data-accion="inicio" data-i18n="guia_inicio">Volver al inicio</a>
+  <a href="../../" data-keep-lang="../../" class="flotante__btn" data-i18n="guia_volver">Volver a la invitación</a>
+</nav>
+
 <script src="../../js/i18n.js"></script>
 <script src="../piques.js"></script>
 <script src="../guia.js"></script>
+<script src="../flotante.js"></script>
 </body>
 </html>
