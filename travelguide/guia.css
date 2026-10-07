@@ -66,3 +66,10 @@
 .destino--cta .illo--brindis { margin-bottom: 8px; }
 [dir="rtl"] .planes { text-align: right; }
 [data-lang="he"] .planes .pique__link, [data-lang="he"] .planes p { font-family: Heebo, var(--body); }
+
+/* ilustraciones dentro de los planes */
+.plan__illo { width: min(62%, 240px); margin: 6px auto 10px; }
+.plan__illo img { display: block; width: 100%; height: auto; filter: invert(1) brightness(1.02); }
+.plan--illo { text-align: center; }
+.plan--illo .pique__link { display: inline-block; }
+.plan--illo p { text-align: center; }
