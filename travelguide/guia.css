@@ -174,3 +174,22 @@
 .section--verde .tip__arrow { color: var(--paper); }
 .section--verde .planes li { border-top-color: rgba(246,243,238,.35); }
 .guia-hero h1 { margin-bottom: 14px; }
+
+/* --- Foto de las novias con marco dibujado --- */
+.foto-marco {
+  position: relative; width: min(64%, 270px); aspect-ratio: 3 / 4;
+  margin: 10px auto 22px; color: var(--paper);
+  transform: rotate(-1.5deg);
+}
+.foto-marco__img {
+  position: absolute; inset: 11.5%; width: 77%; height: 77%;
+  object-fit: cover; border-radius: 2px; display: block;
+  filter: sepia(.12) saturate(.95) contrast(1.02);
+}
+.foto-marco__img::after { content: none; }
+.foto-marco__svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.foto-marco::after {
+  /* grano del papel sobre la foto */
+  content: ""; position: absolute; inset: 11.5%; border-radius: 2px;
+  background-image: var(--grain); opacity: .22; mix-blend-mode: multiply; pointer-events: none;
+}
