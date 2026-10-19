@@ -11,8 +11,7 @@ window.I18N = {
     lugar_ciudad: 'Punta del Este, Uruguay',
     btn_mapa: 'Abrir mapa',
     celebracion: 'La celebración',
-    recepcion: 'recepción',
-    jupa: 'jupá',
+    verso_tr: '“Ponme como un sello sobre tu corazón” - Cantar de los Cantares 8:6',
     confirmacion: 'Confirmación',
     conf_intro: 'Tus respuestas nos ayudan a organizar la fiesta.',
     f_nombre: 'Nombre y apellido',
@@ -23,6 +22,11 @@ window.I18N = {
     r_no: 'No', r_vegetariano: 'Vegetariano', r_vegano: 'Vegano', r_gluten: 'Gluten free', r_kosher: 'Kosher',
     f_mancha: '¿Quién es más probable que se manche el vestido el día del casamiento?',
     m_vacio: 'Sin rencores…',
+    gracias_titulo: '¡Gracias por confirmar, {nombre}!',
+    gracias_voto: 'Apostaste a que {voto} se mancha el vestido primero. Tranqui, esto le pasa a todo el mundo… y no sos la única persona que lo piensa. Te compartimos los datos:',
+    gracias_sin_voto: 'Ya anotamos tu respuesta. ¡Nos vemos en Punta del Este!',
+    gracias_pendiente: 'El formulario todavía está en preparación, pero tu respuesta quedó registrada acá.',
+    gracias_pie: 'Votos hasta ahora, actualizados en el momento.',
     btn_enviar: 'Enviar',
     form_ok: '¡Gracias! Ya recibimos tu confirmación.',
     form_error: 'No pudimos enviar la respuesta. Probá de nuevo en un rato.',
@@ -87,8 +91,7 @@ window.I18N = {
     lugar_ciudad: 'Punta del Este, Uruguai',
     btn_mapa: 'Abrir mapa',
     celebracion: 'A celebração',
-    recepcion: 'recepção',
-    jupa: 'chupá',
+    verso_tr: '“Grava-me como um selo sobre o teu coração” - Cântico dos Cânticos 8:6',
     confirmacion: 'Confirmação',
     conf_intro: 'Suas respostas nos ajudam a organizar a festa.',
     f_nombre: 'Nome e sobrenome',
@@ -99,6 +102,11 @@ window.I18N = {
     r_no: 'Não', r_vegetariano: 'Vegetariano', r_vegano: 'Vegano', r_gluten: 'Sem glúten', r_kosher: 'Kosher',
     f_mancha: 'Quem tem mais chance de manchar o vestido no dia do casamento?',
     m_vacio: 'Sem ressentimentos…',
+    gracias_titulo: 'Obrigada por confirmar, {nombre}!',
+    gracias_voto: 'Você apostou que a {voto} vai manchar o vestido primeiro. Relaxa, isso acontece com todo mundo… e você não é a única pessoa que pensa assim. Compartilhamos os dados:',
+    gracias_sin_voto: 'Já anotamos a sua resposta. A gente se vê em Punta del Este!',
+    gracias_pendiente: 'O formulário ainda está em preparação, mas a sua resposta ficou registrada aqui.',
+    gracias_pie: 'Votos até agora, atualizados na hora.',
     btn_enviar: 'Enviar',
     form_ok: 'Obrigada! Já recebemos sua confirmação.',
     form_error: 'Não conseguimos enviar a resposta. Tente de novo mais tarde.',
@@ -163,8 +171,7 @@ window.I18N = {
     lugar_ciudad: 'פונטה דל אסטה, אורוגוואי',
     btn_mapa: 'לפתוח מפה',
     celebracion: 'החגיגה',
-    recepcion: 'קבלת פנים',
-    jupa: 'חופה',
+    verso_tr: '',
     confirmacion: 'אישור הגעה',
     conf_intro: 'התשובות שלך עוזרות לנו לארגן את המסיבה.',
     f_nombre: 'שם מלא',
@@ -175,6 +182,11 @@ window.I18N = {
     r_no: 'לא', r_vegetariano: 'צמחוני/ת', r_vegano: 'טבעוני/ת', r_gluten: 'ללא גלוטן', r_kosher: 'כשר',
     f_mancha: 'מי יותר סביר שתלכלך את השמלה ביום החתונה?',
     m_vacio: 'בלי טינה…',
+    gracias_titulo: 'תודה שאישרת, {nombre}!',
+    gracias_voto: 'הימרת ש{voto} תלכלך את השמלה ראשונה. אל דאגה, זה קורה לכולם… ולא רק לך זה נראה ככה. הנה הנתונים:',
+    gracias_sin_voto: 'רשמנו את התשובה שלך. נתראה בפונטה דל אסטה!',
+    gracias_pendiente: 'הטופס עדיין בהכנה, אבל התשובה שלך נרשמה כאן.',
+    gracias_pie: 'הצבעות עד עכשיו, מתעדכנות בזמן אמת.',
     btn_enviar: 'שליחה',
     form_ok: 'תודה! קיבלנו את האישור שלך.',
     form_error: 'לא הצלחנו לשלוח את התשובה. נסו שוב מאוחר יותר.',
@@ -255,6 +267,7 @@ window.I18N = {
       a.href = a.getAttribute('data-keep-lang') + '?lang=' + lang;
     });
     try { localStorage.setItem('md-lang', lang); } catch (e) {}
+    document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
   }
 
   // Prioridad: ?lang= en la URL > elección guardada > idioma del navegador > español

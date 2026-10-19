@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Heebo:wght@300;400;500&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=20261018">
 </head>
 <body>
 
@@ -48,10 +48,13 @@
     <div class="jupa">
       <img class="jupa__img" src="img/jupa.svg" alt="Jupá decorada con flores">
       <ol class="jupa__lista">
-        <li><span class="hora display">12:30</span><span class="que" data-i18n="recepcion">recepción</span></li>
-        <li><span class="hora display">13:30</span><span class="que" data-i18n="jupa">jupá</span></li>
+        <li><span class="hora display">13:00</span></li>
       </ol>
     </div>
+    <blockquote class="verso">
+      <p class="verso__he" lang="he" dir="rtl">שימני כחותם על ליבך - שיר השירים ח׳,ו׳</p>
+      <p class="verso__tr" data-i18n="verso_tr">“Ponme como un sello sobre tu corazón” - Cantar de los Cantares 8:6</p>
+    </blockquote>
   </section>
 
   <!-- CONFIRMACIÓN -->
@@ -85,21 +88,37 @@
         </span>
       </label>
 
-      <label class="field">
-        <span data-i18n="f_mancha">¿Quién es más probable que se manche el vestido el día del casamiento?</span>
-        <span class="select">
-          <select name="mancha">
-            <option value="" data-i18n="m_vacio">Sin rencores…</option>
-            <option value="Mari">Mari</option>
-            <option value="Dana">Dana</option>
-          </select>
-        </span>
-      </label>
+      <fieldset class="field field--mancha">
+        <legend data-i18n="f_mancha">¿Quién es más probable que se manche el vestido el día del casamiento?</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="mancha" value="Mari"><em>Mari</em></label>
+          <label class="chip"><input type="radio" name="mancha" value="Dana"><em>Dana</em></label>
+        </div>
+        <small class="muted" data-i18n="m_vacio">Sin rencores…</small>
+      </fieldset>
 
       <button class="btn btn--dark" type="submit" data-i18n="btn_enviar">Enviar</button>
       <p class="form__ok body" hidden data-i18n="form_ok">¡Gracias! Ya recibimos tu confirmación.</p>
       <p class="form__error body" hidden data-i18n="form_error">No pudimos enviar la respuesta. Probá de nuevo en un rato.</p>
     </form>
+
+    <!-- Después de enviar: gracias + el gráfico de los votos -->
+    <div class="gracias" id="gracias" hidden>
+      <h3 class="script gracias__titulo" id="gracias-titulo">¡Gracias por confirmar!</h3>
+      <p class="body gracias__texto" id="gracias-texto"></p>
+      <div class="pie" id="pie-mancha" hidden>
+        <svg class="pie__svg" viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="pie__bg" cx="60" cy="60" r="44"></circle>
+          <circle class="pie__slice pie__slice--mari" cx="60" cy="60" r="44"></circle>
+          <circle class="pie__slice pie__slice--dana" cx="60" cy="60" r="44"></circle>
+        </svg>
+        <div class="pie__legend">
+          <p class="pie__row"><i class="pie__dot pie__dot--mari"></i>Mari <b data-pie="Mari">0%</b></p>
+          <p class="pie__row"><i class="pie__dot pie__dot--dana"></i>Dana <b data-pie="Dana">0%</b></p>
+        </div>
+      </div>
+      <p class="body muted gracias__pie" id="gracias-pie"></p>
+    </div>
   </section>
 
   <!-- DRESS CODE -->
@@ -191,7 +210,7 @@
 
 </main>
 
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+<script src="js/i18n.js?v=20261018"></script>
+<script src="js/main.js?v=20261018"></script>
 </body>
 </html>

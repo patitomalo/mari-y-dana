@@ -114,7 +114,6 @@ body::before {
 [data-lang="he"] .firma { font-size: clamp(30px, 8vw, 40px); }
 [data-lang="he"] .kicker { font-family: "Frank Ruhl Libre", serif; letter-spacing: .12em; }
 [data-lang="he"] .lugar, [data-lang="he"] .display { font-family: var(--display); }
-[data-lang="he"] .jupa__lista .que { font-family: Heebo, var(--body); }
 [dir="rtl"] .tip__arrow { margin-left: auto; margin-right: 10%; transform: scaleX(-1); }
 [dir="rtl"] .select::after { right: auto; left: 6px; }
 [dir="rtl"] .select select { padding-right: 0; padding-left: 28px; }
@@ -246,12 +245,23 @@ h2.script--xl { font-size: clamp(50px, 14vw, 72px); }
   color: var(--paper);
   letter-spacing: .02em;
 }
-.jupa__lista .que {
-  font-size: clamp(12px, 3.4vw, 16px);
-  margin-top: 6px;
-  color: rgba(246,243,238,.85);
-  letter-spacing: .08em;
+.jupa__lista .hora { font-size: clamp(38px, 11vw, 56px); }
+
+/* versículo debajo de la jupá: hebreo siempre, traducción según idioma */
+.verso { max-width: 34ch; margin: 22px auto 0; padding: 0; text-align: center; }
+.verso__he {
+  font-family: Heebo, var(--body);
+  font-size: clamp(17px, 4.6vw, 21px);
+  line-height: 1.5;
+  color: var(--paper);
 }
+.verso__tr {
+  margin-top: 8px;
+  font-size: clamp(13px, 3.6vw, 16px);
+  line-height: 1.5;
+  color: rgba(246,243,238,.85);
+}
+.verso__tr:empty { display: none; }
 
 /* --- Tip de las novias (reutilizable) --- */
 .tip {
@@ -376,7 +386,23 @@ h2.script--xl { font-size: clamp(50px, 14vw, 72px); }
 .form__ok, .form__error { text-align: center; margin-top: 16px; }
 .form__error { color: var(--c-deep); }
 .field.is-invalid input { border-bottom-color: var(--c-deep); }
-.form.is-sending .btn { opacity: .6; pointer-events: none; }
+.form.is-sending .btn { opacity: .85; pointer-events: none; }
+.form.is-sending .btn--dark { color: transparent; position: relative; }
+.form.is-sending .btn--dark::after {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px;
+  border-radius: 50%; border: 2px solid rgba(246,243,238,.35); border-top-color: var(--paper);
+  animation: girar .8s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+
+/* --- Gracias (reemplaza al formulario después de enviar) --- */
+.gracias { max-width: 420px; margin: 24px auto 0; text-align: center; }
+.gracias[hidden] { display: none; }
+.gracias__titulo { font-size: clamp(30px, 8vw, 40px); margin-bottom: 12px; }
+.gracias__texto { max-width: 36ch; margin: 0 auto; }
+.gracias .pie { justify-content: center; margin-top: 22px; }
+.gracias__pie { margin-top: 10px; font-size: 13px; }
+[data-lang="he"] .gracias__titulo { font-family: "Frank Ruhl Libre", serif; }
 
 /* --- Footer --- */
 .footer { padding-bottom: 64px; }
@@ -385,3 +411,32 @@ h2.script--xl { font-size: clamp(50px, 14vw, 72px); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* --- ¿Quién se mancha? chips + pie chart de los votos --- */
+.chips { display: flex; gap: 10px; margin-top: 10px; }
+.chip { position: relative; cursor: pointer; }
+.chip input { position: absolute; opacity: 0; width: 0; height: 0; }
+.chip em {
+  display: inline-block; font-style: normal; font-size: 15px;
+  padding: 8px 18px; border-radius: 999px;
+  border: 1.5px solid var(--c-olive); color: var(--c-olive);
+  transition: background .2s, color .2s;
+}
+.chip input:checked + em { background: var(--c-olive); color: var(--paper); }
+.chip input:focus-visible + em { outline: 2px solid var(--c-clay); outline-offset: 2px; }
+.field--mancha small.muted { display: block; margin-top: 8px; font-size: 13px; }
+.pie { display: flex; align-items: center; gap: 18px; margin-top: 16px; }
+.pie[hidden] { display: none; }
+.pie__svg { width: 104px; height: 104px; flex: 0 0 auto; transform: rotate(-90deg); }
+.pie__bg { fill: none; stroke: var(--paper-2); stroke-width: 24; }
+.pie__slice { fill: none; stroke-width: 24; stroke-dasharray: 0 276.46; transition: stroke-dasharray .6s ease, stroke-dashoffset .6s ease; }
+.pie__slice--mari { stroke: var(--c-clay); }
+.pie__slice--dana { stroke: var(--c-olive); }
+.pie__legend { font-size: 14px; color: var(--ink-soft); }
+.pie__row { margin: 2px 0; display: flex; align-items: center; gap: 8px; color: var(--ink); min-width: 120px; }
+.pie__row b { font-weight: 500; margin-left: auto; padding-left: 10px; }
+.pie__dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.pie__dot--mari { background: var(--c-clay); }
+.pie__dot--dana { background: var(--c-olive); }
+[dir="rtl"] .pie__row b { margin-left: 0; margin-right: auto; padding-left: 0; padding-right: 10px; }
+[data-lang="he"] .chip em, [data-lang="he"] .pie__legend { font-family: Heebo, var(--body); }
