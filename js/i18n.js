@@ -297,6 +297,7 @@ window.I18N = {
 
   // Prioridad: ?lang= en la URL > elección guardada > idioma del navegador > español
   var param = (location.search.match(/[?&]lang=(es|pt|he)/) || [])[1];
+  param = param || document.documentElement.getAttribute('data-lang-default');
   var guardado = null;
   try { guardado = localStorage.getItem('md-lang'); } catch (e) {}
   var nav_lang = (navigator.language || '').toLowerCase();
