@@ -156,3 +156,10 @@
 }
 .flotante__btn:hover { background: rgba(246,243,238,.16); }
 [data-lang="he"] .flotante__btn { font-family: Heebo, var(--body); letter-spacing: 0; font-size: 13px; }
+
+/* subtítulos dentro de la portada de destino */
+.destino__sub {
+  margin: 26px 0 10px; font-size: 15px; letter-spacing: .2em; text-transform: uppercase;
+  text-align: center; font-weight: 400;
+}
+[data-lang="he"] .destino__sub { letter-spacing: .04em; font-size: 17px; }
