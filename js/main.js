@@ -122,7 +122,7 @@
   var pintarGracias = function () {
     if (!gracias || !ultimaRespuesta) return;
     var d = ultimaRespuesta;
-    document.getElementById('gracias-titulo').textContent = tr('gracias_titulo').replace('{nombre}', d.nombre);
+    document.getElementById('gracias-titulo').textContent = tr('gracias_titulo').replace('{nombre}', d.nombre.trim().split(/\s+/)[0]);
     var texto = d.mancha ? tr('gracias_voto').replace('{voto}', d.mancha) : tr('gracias_sin_voto');
     if (d.pendiente) texto = tr('gracias_pendiente') + ' ' + texto;
     document.getElementById('gracias-texto').textContent = texto;
