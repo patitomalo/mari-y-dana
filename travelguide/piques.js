@@ -8,6 +8,7 @@ window.PIQUES = [
       { n: 'Imarangatu Beach', ig: 'imarangatubeach', q: 'Imarangatu Beach Punta del Este', t: 'Parador clásico de la Mansa en parada 7: cocina cuidada, buena música y atardeceres con tragos frente al mar.' },
       { n: 'Parador Posto 5', ig: 'parador_posto5', q: 'Posto 5 Punta del Este', t: 'Beach club relajado en la Mansa: pescados, mariscos y tragos, ideal para almorzar largo y quedarte hasta el atardecer.' },
       { n: 'Muelle 3', ig: 'muelle3.pde', q: 'Muelle 3 Punta del Este', t: 'Cocina sobre el mar con vista increíble: tartar de atún, pastas con mariscos y buenos tragos. Reservá, se llena.' },
+      { n: 'El Poligrillo', q: 'El Poligrillo Punta del Este', t: 'El chivito favorito de Mari: completo (y sin jamón, claro).' },
       { n: 'Baipa Panadería', ig: 'baipapanaderia', q: 'Baipa Panadería Punta del Este', t: 'Cosas dulces, sánguches de miga y el croissant roll de pistacho.' },
       { n: 'El Abasto', ig: 'elabasto.restaurant', q: 'El Abasto Restaurant Punta del Este', t: 'Bodegón, rotisería, cantina. Vermú y croquetas.' },
       { n: 'Burger Time', ig: 'burgertimeuy', q: 'Burger Time Punta del Este', t: 'Cadena uruguaya de hamburguesas con papas con cheddar casero, cerveza y buena música. Rápido y sin vueltas.' },
