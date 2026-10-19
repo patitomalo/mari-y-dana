@@ -442,3 +442,16 @@ h2.script--xl { font-size: clamp(50px, 14vw, 72px); }
 [data-lang="he"] .chip em, [data-lang="he"] .pie__legend { font-family: Heebo, var(--body); }
 
 .gracias__saludo { margin: 0 0 10px; }
+
+/* fecha dentro de la jupá */
+.jupa__lista .hora-linea { display: flex; align-items: baseline; gap: 6px; direction: ltr; }
+.jupa__lista .hora__suf { font-family: var(--body); font-weight: 300; font-size: clamp(13px, 3.6vw, 16px); color: var(--paper); }
+.jupa__lista .hora__suf:empty { display: none; }
+.jupa__lista .jupa__fecha {
+  font-family: var(--body); font-weight: 300; color: var(--paper);
+  font-size: clamp(13px, 3.8vw, 16px); letter-spacing: 0; line-height: 1.25; text-align: center; max-width: 15ch;
+}
+.jupa__lista .jupa__fecha--he {
+  font-family: "Frank Ruhl Libre", serif; font-weight: 400; font-size: clamp(18px, 5.2vw, 25px);
+}
+[data-lang="he"] .jupa__lista .jupa__fecha { font-family: Heebo, var(--body); }
