@@ -18,7 +18,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Generar páginas por idioma (pt, he)
+      - name: Generar páginas por idioma (es, pt, he)
         run: python3 build-idiomas.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

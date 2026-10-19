@@ -1,4 +1,4 @@
-"""Genera /pt/ y /he/ a partir de las páginas en español, con sus metadatos
+"""Genera /es/, /pt/ y /he/ a partir de las páginas en español, con sus metadatos
 de preview (Open Graph) traducidos. Se corre antes de publicar (ver
 .github/workflows/pages.yml). No editar las carpetas pt/ y he/ a mano."""
 import os, re, shutil, html
@@ -6,6 +6,12 @@ import os, re, shutil, html
 D = 'https://mari-and-dana.com'
 PAGINAS = ['index.html', 'travelguide/index.html', 'travelguide/comer/index.html']
 OG = {
+  'es': {
+    'index.html': ('Mari &amp; Dana · ¡Nos casamos!', '13 de diciembre de 2026 · Toda Flor, Punta del Este, Uruguay. Confirmá tu asistencia y mirá todos los detalles.', 'og-invitacion.jpg'),
+    'travelguide/index.html': ('Guía de las novias · Punta del Este', 'Todo lo que tenés que saber de Punta del Este, contado por Mari y Dana: cómo llegar, qué hacer y dónde comer.', 'og-guia.jpg'),
+    'travelguide/comer/index.html': ('Dónde comer · Guía de las novias', 'Los lugares de Mari y Dana por zona: Punta del Este, La Barra, Manantiales y José Ignacio, con mapa.', 'og-comer.jpg'),
+    '_locale': 'es_UY', '_lang': 'es',
+  },
   'pt': {
     'index.html': ('Mari &amp; Dana · Vamos nos casar!', '13 de dezembro de 2026 · Toda Flor, Punta del Este, Uruguai. Confirme sua presença e veja todos os detalhes.', 'og-invitacion-pt.jpg'),
     'travelguide/index.html': ('Guia das noivas · Punta del Este', 'Tudo o que você precisa saber sobre Punta del Este, contado por Mari e Dana: como chegar, o que fazer e onde comer.', 'og-guia-pt.jpg'),
