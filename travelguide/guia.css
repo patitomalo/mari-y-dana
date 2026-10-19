@@ -159,7 +159,7 @@
 
 /* subtítulos dentro de la portada de destino */
 .destino__sub {
-  margin: 26px 0 10px; font-size: 15px; letter-spacing: .2em; text-transform: uppercase;
-  text-align: center; font-weight: 400;
+  margin: 30px 0 10px; font-size: clamp(20px, 5.6vw, 24px); letter-spacing: .16em; text-transform: uppercase;
+  text-align: center; font-weight: 400; line-height: 1.2;
 }
-[data-lang="he"] .destino__sub { letter-spacing: .04em; font-size: 17px; }
+[data-lang="he"] .destino__sub { letter-spacing: .03em; font-size: 23px; }
