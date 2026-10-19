@@ -281,6 +281,10 @@ window.I18N = {
       b.classList.toggle('is-active', b.getAttribute('data-lang') === lang);
     });
     window.LANG = lang;
+    document.querySelectorAll('[data-src-es]').forEach(function (img) {
+      var src = img.getAttribute('data-src-' + lang) || img.getAttribute('data-src-es');
+      if (img.getAttribute('src') !== src) img.setAttribute('src', src);
+    });
     document.querySelectorAll('a[data-keep-lang]').forEach(function (a) {
       a.href = a.getAttribute('data-keep-lang') + '?lang=' + lang;
     });

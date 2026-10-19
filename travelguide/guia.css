@@ -167,3 +167,10 @@
 /* links dentro de los tips */
 .tip__text a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
 .tip__text a:hover { opacity: .75; }
+
+/* "Para hacer": verde propio, más fresco que el khaki */
+.section--verde { background-color: #5F6E4B; color: var(--paper); }
+.section--verde .script, .section--verde .lead { color: var(--paper); }
+.section--verde .tip__arrow { color: var(--paper); }
+.section--verde .planes li { border-top-color: rgba(246,243,238,.35); }
+.guia-hero h1 { margin-bottom: 14px; }
