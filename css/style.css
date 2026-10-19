@@ -440,3 +440,5 @@ h2.script--xl { font-size: clamp(50px, 14vw, 72px); }
 .pie__dot--dana { background: var(--c-olive); }
 [dir="rtl"] .pie__row b { margin-left: 0; margin-right: auto; padding-left: 0; padding-right: 10px; }
 [data-lang="he"] .chip em, [data-lang="he"] .pie__legend { font-family: Heebo, var(--body); }
+
+.gracias__saludo { margin: 0 0 10px; }
