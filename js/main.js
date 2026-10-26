@@ -207,3 +207,26 @@
     });
   }
 })();
+
+// ---------- Regalos: tocar un número lo copia ----------
+(function () {
+  document.querySelectorAll('[data-copiar]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-copiar');
+      var listo = function () {
+        if (b.classList.contains('is-copiado')) return;
+        var t = (window.I18N[window.LANG] || window.I18N.es).copiado || 'Copiado';
+        var original = b.textContent;
+        b.textContent = t + ' ✓'; b.classList.add('is-copiado');
+        setTimeout(function () { b.textContent = original; b.classList.remove('is-copiado'); }, 1400);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(listo, listo);
+      else {
+        var r = document.createRange(); r.selectNodeContents(b);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        try { document.execCommand('copy'); } catch (e) {}
+        listo();
+      }
+    });
+  });
+})();
