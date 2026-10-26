@@ -455,3 +455,11 @@ h2.script--xl { font-size: clamp(50px, 14vw, 72px); }
   font-family: "Frank Ruhl Libre", serif; font-weight: 400; font-size: clamp(18px, 5.2vw, 25px);
 }
 [data-lang="he"] .jupa__lista .jupa__fecha { font-family: Heebo, var(--body); }
+
+/* datos de las cuentas en Regalos */
+.cuentas { display: grid; gap: 16px; margin: 20px auto 0; max-width: 34ch; }
+.cuenta { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.cuenta__label { font-family: var(--display); font-size: 13px; letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
+.cuenta__valor { font-family: var(--body); font-weight: 400; font-size: 20px; letter-spacing: .06em; user-select: all; }
+.cuenta__nombre { font-family: var(--body); font-weight: 300; font-size: 15px; opacity: .9; }
+[data-lang="he"] .cuenta__label { font-family: Heebo, var(--body); letter-spacing: .02em; font-size: 14px; }

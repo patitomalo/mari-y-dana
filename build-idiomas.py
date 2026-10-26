@@ -7,21 +7,21 @@ D = 'https://mari-and-dana.com'
 PAGINAS = ['index.html', 'travelguide/index.html', 'travelguide/comer/index.html']
 OG = {
   'es': {
-    'index.html': ('Mari &amp; Dana · ¡Nos casamos!', '13 de diciembre de 2026 · Toda Flor, Punta del Este, Uruguay. Confirmá tu asistencia y mirá todos los detalles.', 'og-invitacion.jpg'),
+    'index.html': ('Mari &amp; Dana · ¡Nos casamos!', '13 de diciembre de 2026 · Posto 5, Punta del Este, Uruguay. Confirmá tu asistencia y mirá todos los detalles.', 'og-invitacion.jpg'),
     'travelguide/index.html': ('Guía de las novias · Punta del Este', 'Todo lo que tenés que saber de Punta del Este, contado por Mari y Dana: cómo llegar, qué hacer y dónde comer.', 'og-guia.jpg'),
     'travelguide/comer/index.html': ('Dónde comer · Guía de las novias', 'Los lugares de Mari y Dana por zona: Punta del Este, La Barra, Manantiales y José Ignacio, con mapa.', 'og-comer.jpg'),
     '_locale': 'es_UY', '_lang': 'es',
   },
   'pt': {
-    'index.html': ('Mari &amp; Dana · Vamos nos casar!', '13 de dezembro de 2026 · Toda Flor, Punta del Este, Uruguai. Confirme sua presença e veja todos os detalhes.', 'og-invitacion-pt.jpg'),
+    'index.html': ('Mari &amp; Dana · Vamos nos casar!', '13 de dezembro de 2026 · Posto 5, Punta del Este, Uruguai. Confirme sua presença e veja todos os detalhes.', 'og-invitacion-pt.jpg'),
     'travelguide/index.html': ('Guia das noivas · Punta del Este', 'Tudo o que você precisa saber sobre Punta del Este, contado por Mari e Dana: como chegar, o que fazer e onde comer.', 'og-guia-pt.jpg'),
     'travelguide/comer/index.html': ('Onde comer · Guia das noivas', 'Os lugares de Mari e Dana por região: Punta del Este, La Barra, Manantiales e José Ignacio, com mapa.', 'og-comer-pt.jpg'),
     '_locale': 'pt_BR', '_lang': 'pt-BR',
   },
   'he': {
-    'index.html': ('מרי ודנה · מתחתנות!', '13 בדצמבר 2026 · Toda Flor, פונטה דל אסטה, אורוגוואי. אשרו הגעה וראו את כל הפרטים.', 'og-invitacion-he.jpg'),
-    'travelguide/index.html': ('המדריך של הכלות · פונטה דל אסטה', 'כל מה שצריך לדעת על פונטה דל אסטה, מפי מרי ודנה: איך מגיעים, מה עושים ואיפה אוכלים.', 'og-guia-he.jpg'),
-    'travelguide/comer/index.html': ('איפה אוכלים · המדריך של הכלות', 'המקומות של מרי ודנה לפי אזור: פונטה דל אסטה, לה בארה, מננטיאלס וחוסה איגנסיו, עם מפה.', 'og-comer-he.jpg'),
+    'index.html': ('מארי ודנה · מתחתנות!', '13 בדצמבר 2026 · Posto 5, פונטה דל אסטה, אורוגוואי. אשרו הגעה וראו את כל הפרטים.', 'og-invitacion-he.jpg'),
+    'travelguide/index.html': ('המדריך של הכלות · פונטה דל אסטה', 'כל מה שצריך לדעת על פונטה דל אסטה, מפי מארי ודנה: איך מגיעים, מה עושים ואיפה אוכלים.', 'og-guia-he.jpg'),
+    'travelguide/comer/index.html': ('איפה אוכלים · המדריך של הכלות', 'המקומות של מארי ודנה לפי אזור: פונטה דל אסטה, לה בארה, מננטיאלס וחוסה איגנסיו, עם מפה.', 'og-comer-he.jpg'),
     '_locale': 'he_IL', '_lang': 'he',
   },
 }
