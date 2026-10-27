@@ -1,4 +1,4 @@
-/* Mari & Dana · idiomas: es (Salú), pt (Saúde), he (לחיים)
+/* Mari & Dana · idiomas: es (ES), pt (PT), he (עב)
    Los valores que se envían en el formulario quedan siempre en español;
    acá solo se traduce lo que se ve. */
 window.I18N = {
@@ -44,7 +44,7 @@ window.I18N = {
     regalos: 'Regalos',
     regalos_texto: 'El mejor regalo es que vengas a compartir este día con nosotras. Si además querés ayudarnos a empezar esta nueva etapa, acá están nuestros datos:',
     copiado: 'Copiado',
-    regalos_pix: 'PIX (Brasil)', regalos_cuenta: 'Scotiabank · Cuenta corriente en USD', regalos_titular: 'A nombre de Ernesto Elenter',
+    regalos_pix: 'Brasil · PIX', regalos_cuenta: 'Uruguay · Scotiabank · Cuenta corriente en USD', regalos_titular: 'A nombre de Ernesto Elenter',
     nos_vemos: 'Nos vemos en…',
     dias: 'días', horas: 'horas', min: 'min', seg: 'seg',
     firma: 'Con amor,<br>Mari &amp; Dana',
@@ -134,7 +134,7 @@ window.I18N = {
     regalos: 'Presentes',
     regalos_texto: 'O melhor presente é você vir compartilhar esse dia com a gente. Se além disso quiser nos ajudar a começar essa nova etapa, aqui estão nossos dados:',
     copiado: 'Copiado',
-    regalos_pix: 'PIX (Brasil)', regalos_cuenta: 'Scotiabank · Conta corrente em USD', regalos_titular: 'Em nome de Ernesto Elenter',
+    regalos_pix: 'Brasil · PIX', regalos_cuenta: 'Uruguai · Scotiabank · Conta corrente em USD', regalos_titular: 'Em nome de Ernesto Elenter',
     nos_vemos: 'Nos vemos em…',
     dias: 'dias', horas: 'horas', min: 'min', seg: 'seg',
     firma: 'Com amor,<br>Mari &amp; Dana',
@@ -224,7 +224,7 @@ window.I18N = {
     regalos: 'מתנות',
     regalos_texto: 'המתנה הכי טובה היא שתבואו לחגוג איתנו את היום הזה. אם בא לכם גם לעזור לנו להתחיל פרק חדש בחיים שלנו, הנה הפרטים שלנו:',
     copiado: 'הועתק',
-    regalos_pix: 'PIX (ברזיל)', regalos_cuenta: 'Scotiabank · חשבון עו״ש בדולרים', regalos_titular: 'על שם Ernesto Elenter',
+    regalos_pix: 'ברזיל · PIX', regalos_cuenta: 'אורוגוואי · Scotiabank · חשבון עו״ש בדולרים', regalos_titular: 'על שם Ernesto Elenter',
     nos_vemos: 'נתראה בעוד…',
     dias: 'ימים', horas: 'שעות', min: 'דקות', seg: 'שניות',
     firma: 'באהבה,<br>מארי ודנה',

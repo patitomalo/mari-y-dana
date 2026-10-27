@@ -457,9 +457,10 @@ h2.script--xl { font-size: clamp(50px, 14vw, 72px); }
 [data-lang="he"] .jupa__lista .jupa__fecha { font-family: Heebo, var(--body); }
 
 /* datos de las cuentas en Regalos */
-.cuentas { display: grid; gap: 16px; margin: 20px auto 0; max-width: 34ch; }
+.cuentas { display: grid; gap: 0; margin: 20px auto 0; max-width: 34ch; }
+.cuenta + .cuenta { border-top: 1px solid rgba(246,243,238,.3); margin-top: 16px; padding-top: 16px; }
 .cuenta { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 3px; }
-.cuenta__label { font-family: var(--display); font-size: 13px; letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
+.cuenta__label { font-family: var(--display); font-size: 13px; letter-spacing: .16em; text-transform: uppercase; opacity: .85; line-height: 1.5; }
 .cuenta__valor {
   font-family: var(--body); font-weight: 400; font-size: 20px; letter-spacing: .06em;
   color: inherit; background: none; border: 0; padding: 2px 6px; cursor: pointer;
@@ -469,3 +470,4 @@ h2.script--xl { font-size: clamp(50px, 14vw, 72px); }
 a[href^="tel"], .cuenta a { color: inherit; text-decoration: none; }
 .cuenta__nombre { font-family: var(--body); font-weight: 300; font-size: 15px; opacity: .9; }
 [data-lang="he"] .cuenta__label { font-family: Heebo, var(--body); letter-spacing: .02em; font-size: 14px; }
+.idiomas button { min-width: 38px; letter-spacing: .08em; font-size: 12px; }
