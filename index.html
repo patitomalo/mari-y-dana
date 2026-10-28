@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Heebo:wght@300;400;500&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261027">
+<link rel="stylesheet" href="css/style.css?v=20261028">
 </head>
 <body>
 
@@ -59,13 +59,13 @@
   <!-- LA CELEBRACIÓN -->
   <section class="section section--clay section--celebracion">
     <h2 class="script" data-i18n="celebracion">La celebración</h2>
+    <div class="celebracion__datos">
+      <span class="hora-linea"><span class="hora display">13:00</span><span class="hora__suf" data-i18n="hora_suf">hs</span></span>
+      <span class="jupa__fecha" data-i18n="fecha_larga">13 de diciembre 2026</span>
+      <span class="jupa__fecha jupa__fecha--he" lang="he" dir="rtl">ג׳ בטבת תשפ״ז</span>
+    </div>
     <div class="jupa">
       <img class="jupa__img" src="img/jupa.svg" alt="Jupá decorada con flores">
-      <ol class="jupa__lista">
-        <li><span class="hora-linea"><span class="hora display">13:00</span><span class="hora__suf" data-i18n="hora_suf">hs</span></span></li>
-        <li><span class="jupa__fecha" data-i18n="fecha_larga">13 de diciembre 2026</span></li>
-        <li><span class="jupa__fecha jupa__fecha--he" lang="he" dir="rtl">ג׳ בטבת תשפ״ז</span></li>
-      </ol>
     </div>
     <blockquote class="verso">
       <p class="verso__he" lang="he" dir="rtl">שימני כחותם על ליבך - שיר השירים ח׳,ו׳</p>
@@ -78,6 +78,7 @@
     <figure class="illo illo--ramo"><img src="img/ramo.svg" alt=""></figure>
     <h2 class="script" data-i18n="confirmacion">Confirmación</h2>
     <p class="body" data-i18n="conf_intro">Tus respuestas nos ayudan a organizar la fiesta.</p>
+    <p class="body strong conf-nota" data-i18n="conf_nota">Una respuesta por persona, por favor.</p>
 
     <form class="form" id="rsvp" novalidate>
       <label class="field">
@@ -98,7 +99,7 @@
             <option value="No" data-i18n="r_no">No</option>
             <option value="Vegetariano" data-i18n="r_vegetariano">Vegetariano</option>
             <option value="Vegano" data-i18n="r_vegano">Vegano</option>
-            <option value="Gluten free" data-i18n="r_gluten">Gluten free</option>
+            <option value="Celíaco" data-i18n="r_gluten">Celíaco</option>
           </select>
         </span>
       </label>
@@ -236,7 +237,7 @@
 
 </main>
 
-<script src="js/i18n.js?v=20261027"></script>
+<script src="js/i18n.js?v=20261028"></script>
 <script src="js/main.js?v=20261026b"></script>
 </body>
 </html>
